@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" role="img" aria-labelledby="title desc">
+  <title id="title">Material style gradient thumbnail</title>
+  <desc id="desc">Soft multi-color gradient background with blurred accent blobs.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#6750A4"/>
+      <stop offset="35%" stop-color="#4F378B"/>
+      <stop offset="70%" stop-color="#7D5260"/>
+      <stop offset="100%" stop-color="#625B71"/>
+    </linearGradient>
+    <radialGradient id="blobA" cx="30%" cy="25%" r="45%">
+      <stop offset="0%" stop-color="#D0BCFF" stop-opacity="0.85"/>
+      <stop offset="100%" stop-color="#D0BCFF" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="blobB" cx="75%" cy="65%" r="50%">
+      <stop offset="0%" stop-color="#CCC2DC" stop-opacity="0.75"/>
+      <stop offset="100%" stop-color="#CCC2DC" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="blobC" cx="60%" cy="15%" r="35%">
+      <stop offset="0%" stop-color="#EFB8C8" stop-opacity="0.6"/>
+      <stop offset="100%" stop-color="#EFB8C8" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="soft" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="24"/>
+    </filter>
+  </defs>
+
+  <rect width="1200" height="800" fill="url(#bg)"/>
+  <circle cx="320" cy="220" r="300" fill="url(#blobA)" filter="url(#soft)"/>
+  <circle cx="900" cy="560" r="360" fill="url(#blobB)" filter="url(#soft)"/>
+  <circle cx="760" cy="140" r="220" fill="url(#blobC)" filter="url(#soft)"/>
+
+  <g opacity="0.18" stroke="#FFFFFF" stroke-width="2" fill="none">
+    <path d="M80 680 C280 560, 420 760, 620 640 S980 520, 1120 620"/>
+    <path d="M100 120 C260 40, 520 220, 760 120 S1040 80, 1160 180"/>
+  </g>
+</svg>

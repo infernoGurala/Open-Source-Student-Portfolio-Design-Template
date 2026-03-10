@@ -56,6 +56,17 @@ tabsContainer.addEventListener("click", (e) => {
         aboutSection.querySelector(target).classList.add("active");
     }
 });
+
+/* -------------- Recent Work Order ----------------------- */
+const firstPortfolioItem = document.querySelector(".portfolio-section .portfolio-item");
+if (firstPortfolioItem) {
+    const portfolioItemsRow = firstPortfolioItem.parentElement;
+    const portfolioItems = Array.from(portfolioItemsRow.querySelectorAll(":scope > .portfolio-item"));
+
+    // Keep newest additions (appended in HTML) at the top of the list.
+    portfolioItems.reverse().forEach((item) => portfolioItemsRow.appendChild(item));
+}
+
 /* -------------- Portfolio Item Popup ----------------------- */
 document.addEventListener("click", (e) => {
     if (e.target.classList.contains("view-project-btn")) {
